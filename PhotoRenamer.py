@@ -1,6 +1,10 @@
 # -*- coding:utf-8 -*-
-__author__ = 'Biscuit@Linux'
+"""
+@author: Biscuit@Linux
+https://github.com/BiscuitAtLinux/pyPhotoRenamer
+"""
 
+from __future__ import print_function
 import os
 import sys
 from DateName import DateName
@@ -58,7 +62,7 @@ for i in range(0,len(dateNames)):
         newName = dateNames[i].getNewName()
     else:
         newName = dateNames[i].getNewName(dateNames[i-1])
-    print oldName,'to',newName
+    print(oldName, 'to', newName)
     #修改各种支持的后缀
     for ext in ['JPG','ARW','CR2','TIF','TIFF','jpg','arw','cr2','tif','tiff','RW2','rw2','DNG','dng']:
         try:
