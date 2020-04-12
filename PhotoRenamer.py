@@ -51,7 +51,7 @@ for filename in filenames:
         continue
     ext = splitName[len(splitName)-1].lower()
     #只处理支持的图形文件
-    if ext in ['jpg','arw','cr2','tif','tiff','rw2','dng']:
+    if ext in ['jpg','arw','cr2','tif','tiff','rw2','dng','raf']:
         lastName = name
         dateNames.append(DateName(filename))
 
@@ -64,7 +64,7 @@ for i in range(0,len(dateNames)):
         newName = dateNames[i].getNewName(dateNames[i-1])
     print(oldName, 'to', newName)
     #修改各种支持的后缀
-    for ext in ['JPG','ARW','CR2','TIF','TIFF','jpg','arw','cr2','tif','tiff','RW2','rw2','DNG','dng']:
+    for ext in ['JPG','ARW','CR2','TIF','TIFF','jpg','arw','cr2','tif','tiff','RW2','rw2','DNG','dng','RAF','raf']:
         try:
             os.rename(oldName+'.'+ext,newName+'.'+ext)
         except:
